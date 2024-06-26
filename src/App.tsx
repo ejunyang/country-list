@@ -16,7 +16,6 @@ function App() {
         console.error("데이터를 가지고오지 못했습니다.");
       }
     };
-
     fetchData();
   }, []);
 
@@ -49,7 +48,9 @@ function App() {
       <h1 className="block text-center text-2xl m-5 font-bold">Countries</h1>
       <div className="flex justify-center w-[1080px] mx-auto">
         <CountryList
-          countries={sortedCounries}
+          countries={sortedCounries.filter(
+            (country: Country) => !country.isFavorite
+          )}
           handelSelected={handelSelected}
         />
       </div>
