@@ -1,9 +1,9 @@
 import { Country } from "../types/CountryType";
 
-type Props = {
+interface Props {
   country: Country;
   onToggle(area: number): void;
-};
+}
 
 const CountryCard = ({ country, onToggle }: Props) => {
   return (

@@ -1,11 +1,11 @@
 import CountryCard from "./CountryCard";
 import { Country } from "../types/CountryType";
 
-type Props = {
+interface Props {
   title: string;
   countries: Country[] | undefined;
   onToggle(area: number): void;
-};
+}
 
 const CountryList = ({ title, countries, onToggle }: Props) => {
   const sortedCounries = countries?.sort((a, b) =>
