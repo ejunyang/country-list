@@ -2,14 +2,14 @@ import { Country } from "../types/CountryType";
 
 interface Props {
   country: Country;
-  handleSeleted: (country: Country) => void;
+  handelSelected: (area: number) => void;
 }
 
-const CountryCard = ({ country, handleSeleted }: Props) => {
+const CountryCard = ({ country, handelSelected }: Props) => {
   return (
     <>
       <div
-        onClick={() => handleSeleted(country)}
+        onClick={() => handelSelected(country.area)}
         className="bg-white rounded-lg p-5 text-center transition-all duration-300 ease-in-out hover:bg-[#dddddd] hover:cursor-pointer"
       >
         <p className="h-[150px]">
